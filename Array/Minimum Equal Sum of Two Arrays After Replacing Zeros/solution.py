@@ -1,0 +1,1 @@
+class Solution:minSum=lambda _,A,B:-1 if(not(x:=sorted([(sum(A),A.count(0)),(sum(B),B.count(0))],key=sum))[0][1]and sum(x[1])!=x[0][0])or sum(x[1])-x[0][0]<x[0][1]else sum(x[1])
