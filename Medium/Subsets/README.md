@@ -1,0 +1,22 @@
+# Subsets
+
+**Difficulty:** Medium
+**Tags:** `Array`, `Backtracking`, `Bit Manipulation`
+**Language:** cpp
+
+## Approach
+<!-- Describe your approach here. -->
+_TODO: describe the approach you used._
+
+## Complexity
+- **Time complexity:** _TODO_
+- **Space complexity:** _TODO_
+
+## Submission stats
+- **Runtime:** N/A
+- **Memory:** 9696000
+- **Submitted:** 2026-04-22T02:23:24.000Z
+- **Problem link:** https://leetcode.com/problems/subsets/
+
+---
+_Synced automatically by LeetCode → GitHub Sync._
