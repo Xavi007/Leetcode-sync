@@ -1,27 +1,19 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-        if (n == 0) return 1.0;
-        if (x == 0) return 0.0;
-        if (x == 1) return 1.0;
-        if (x == -1 && n % 2 == 0) return 1.0;
-        if (x == -1 && n % 2 != 0) return -1.0;
-
-        long binForm = n;
-        if (n < 0) {
+        long N = n;
+        if (N < 0) {
             x = 1 / x;
-            binForm = -binForm;
+            N = -N;
         }
+        return fastPow(x, N);
+    }
 
-        double ans = 1;
-        while (binForm > 0) {
-            if (binForm % 2 == 1) {
-                ans *= x;
-            }
-            x *= x;
-            binForm /= 2;
-        }
-
-        return ans;
+private:
+    double fastPow(double x, long n) {
+        if (n == 0) return 1.0;
+        double half = fastPow(x, n / 2);
+        if (n % 2 == 0) return half * half;
+        return half * half * x;
     }
 };
