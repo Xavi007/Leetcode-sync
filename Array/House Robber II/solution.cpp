@@ -4,19 +4,17 @@ public:
     {
         int n = nums.size();
 
-        int prev1 = nums[start];
-        int prev2 = max(nums[start], nums[start+1]);
-        int result = prev2;
+        vector<int>dp(n-1);
+
+        dp[0] = nums[start];
+        dp[1] = max(nums[start], nums[start+1]);
 
         for(int i = start + 2, j = 2; i <= end; ++i, ++j)
         {
-            result = max(prev2, prev1 + nums[i]);
-
-            prev1 = prev2;
-            prev2 = result;
+            dp[j] = max(dp[j-1], dp[j-2] + nums[i]);
         }
 
-        return result;
+        return dp[n-2];
     }
 
     int rob(vector<int>& nums) 
